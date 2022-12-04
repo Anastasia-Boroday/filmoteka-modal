@@ -9,6 +9,8 @@
     --font-btn-not-selected:#F7F7F7;
 
 }
+$tablet:768px;
+$desktop:1024px;
 
 .backdrop {
     position: fixed;
@@ -32,14 +34,16 @@
     top: 50%;
     transform: translate(-50%, -50%);
 
-
     // // height: 940px;
     width: 280px;
     height: 90%;
     overflow: auto;
     
-
     background-color: var(--modal-bg);
+    @media screen and (min-width:$tablet){
+        width: 704px;
+        height: auto;
+    }
     
 
 }
@@ -58,14 +62,29 @@
 // ----------------------------------------------
 .modal-container{
     padding: 48px 20px 40px 20px;
+    @media screen and (min-width:$tablet) {
+        display: flex;
+        padding: 40px 36px ;
+        
+    }
 
+}
+.modal-container-columns{
+    width: 264px;
 }
 .modal__img{
     width: 240px;
     height: 357px;
     border-radius: 5px;
     margin-bottom: 20px;
+    @media screen and (min-width:$tablet) {
+        width: 264px;
+        height: 374px;
+        margin-bottom: 0;
+        margin-right: 68px;
+    }
 }
+
 .modal__name{
     margin-top: 0;
     margin-bottom: 20px;
@@ -75,6 +94,10 @@
     font-size: 20px;
     line-height: 1.17;
     color: var(--fontFamily-black);
+    @media screen and (min-width:$tablet) {
+        line-height: 1.15;
+    
+    }
 }
 .modal__list-theme{
     margin-right: 40px;
