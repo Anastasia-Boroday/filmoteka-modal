@@ -70,7 +70,12 @@ $desktop:1024px;
 
 }
 .modal-container-columns{
-    width: 264px;
+    @media screen and (min-width:$tablet) {
+        width: 264px;
+    
+        }
+   
+
 }
 .modal__img{
     width: 240px;
