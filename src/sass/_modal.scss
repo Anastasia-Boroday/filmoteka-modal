@@ -44,6 +44,10 @@ $desktop:1024px;
         width: 704px;
         height: auto;
     }
+    @media screen and (min-width:$desktop) {
+         width: 806px;
+         height: auto;
+    }
     
 
 }
@@ -67,6 +71,10 @@ $desktop:1024px;
         padding: 40px 36px ;
         
     }
+    @media screen and (min-width:$desktop) {
+        display: flex;
+         padding: 40px 12px;
+    }
 
 }
 .modal-container-columns{
@@ -74,6 +82,9 @@ $desktop:1024px;
         width: 264px;
     
         }
+    @media screen and (min-width:$desktop) {
+        width: auto;
+    }
    
 
 }
@@ -87,6 +98,12 @@ $desktop:1024px;
         height: 374px;
         margin-bottom: 0;
         margin-right: 68px;
+    }
+    @media screen and (min-width:$desktop) {
+        width: 375px;
+        height: 478px;
+        margin-bottom: 0;
+        margin-right: 16px;
     }
 }
 
@@ -103,9 +120,18 @@ $desktop:1024px;
         line-height: 1.15;
     
     }
+    @media screen and (min-width:$desktop) {
+        font-size: 30px;
+        line-height: 1.17;
+    
+    }
 }
 .modal__list-theme{
     margin-right: 40px;
+    @media screen and (min-width:$desktop) {
+        margin-right: 85px;
+
+    }
 }
 .modal__item{
    margin-bottom: 8px;
@@ -173,9 +199,13 @@ $desktop:1024px;
     line-height: 1.7;
     color: var(--font-black);
 }
+// -----------------btn-----------------------------
 .modal__btn-list{
     display: flex;
     justify-content: space-between;
+    @media screen and (min-width:$tablet) {
+        justify-content:flex-start;
+    }
 }
 
 .modal__btn{
@@ -183,31 +213,34 @@ $desktop:1024px;
     height: 44px;
 
     border-radius: 5px;
+    align-items: center;
+    text-align: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.3;
     cursor: pointer;
+    @media screen and (min-width:$tablet) {
+        width: 125px;    
+    }
+    @media screen and (min-width:$tablet) {
+        width: 136px;
+    }
+
     &.watched{
+        margin-right: 15px;
+
         border: none;
         background-color: var(--font-btn-watched);
-        align-items: center;
-        text-align: center;
         text-transform: uppercase;
 
         font-family: var(--fontFamily-roboto);
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 1.3;
         color: var(--modal-bg);
+
     }
     &.queue{
         border: 1px solid var(--font-black);
-
-        align-items: center;
-        text-align: center;
         text-transform: uppercase;
-
         font-family: var(--fontFamily-roboto);
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 1.3;
         color: var(--font-black);
     }
 }
