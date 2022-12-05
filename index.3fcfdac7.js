@@ -1,0 +1,2 @@
+const e=document.querySelector(".modal__btn-close"),t=document.querySelector("[data-modal]"),n=document.querySelector(".backdrop");function c(){document.removeEventListener("keydown",d),t.classList.toggle("is-hidden")}function d(e){"Escape"===e.code&&c()}document.querySelector("[data-modal-open]").addEventListener("click",(function(){document.addEventListener("keydown",d),t.classList.toggle("is-hidden")})),e.addEventListener("click",c),n.addEventListener("click",(function(e){e.target===e.currentTarget&&c()}));
+//# sourceMappingURL=index.3fcfdac7.js.map
