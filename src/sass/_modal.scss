@@ -63,9 +63,33 @@ $desktop:1024px;
 
     width: 30px;
     height: 30px;
-    color: var(--font-black);
-    cursor: pointer;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
 
+    outline: none;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;  
+    transition:box-shadow 250ms var(--cubic-bezier);
+    cursor: pointer;
+    &:focus,
+    &:hover{
+        border-radius: 5px;
+        box-shadow: 0 0 5px 0 var(--font-btn-watched) inset,
+                0 0 5px 2px var(--font-btn-watched);
+
+    }
+
+}
+.modal-icon {
+    stroke: var(--font-black);
+    width: 30px;
+    height: 30px;
+    &:focus,
+    &:hover {
+       stroke: var(--font-btn-watched);
+    }
 }
 // ----------------------------------------------
 .modal-container{
